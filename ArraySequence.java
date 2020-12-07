@@ -5,13 +5,14 @@ public class ArraySequence implements IntegerSequence {
 
     public ArraySequence(int[] other) {
         data = other.clone();
-        currentIndex = 0;
+        currentIndex = -1;
     }
     public boolean hasNext() {
         return currentIndex < data.length - 1;
     }
     public int next() {
-        return 0;
+        currentIndex ++;
+        return data[currentIndex];
     }
     public int length() {
         return 0;
