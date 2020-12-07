@@ -4,10 +4,10 @@ public class Range implements IntegerSequence{
     public Range(int start, int end) {
         this.start = start;
         this.end = end;
-        this.current = start;
+        this.current = start - 1;
     }
     public void reset() {
-        this.current = start;
+        this.current = start - 1;
     }
     public int length() {
         return end - start + 1;
