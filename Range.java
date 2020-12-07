@@ -9,4 +9,7 @@ public class Range implements IntegerSequence{
     public void reset() {
         this.current = start;
     }
+    public int length() {
+        return end - start + 1;
+    }
 }
