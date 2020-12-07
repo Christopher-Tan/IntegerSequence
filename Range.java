@@ -16,7 +16,10 @@ public class Range implements IntegerSequence{
         return this.current < this.end;
     }
     public int next() throws NoSuchElementException {
-        this.current ++;
+        if (this.current + 1 > this.end) {
+            throw new NoSuchElementException("element does not exist in range");
+        }
+        this.current++;
         return this.current;
     }
 }
