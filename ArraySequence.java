@@ -11,11 +11,11 @@ public class ArraySequence implements IntegerSequence {
         return currentIndex < data.length - 1;
     }
     public int next() {
-        currentIndex ++;
+        currentIndex++;
         return data[currentIndex];
     }
     public int length() {
-        return 0;
+        return data.length;
     }
     public void reset() {
 
