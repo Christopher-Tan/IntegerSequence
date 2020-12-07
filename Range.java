@@ -15,4 +15,8 @@ public class Range implements IntegerSequence{
     public boolean hasNext() {
         return this.current < this.end;
     }
+    public int next() throws NoSuchElementException {
+        this.current ++;
+        return this.current;
+    }
 }
