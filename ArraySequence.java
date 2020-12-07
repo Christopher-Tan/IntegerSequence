@@ -18,6 +18,6 @@ public class ArraySequence implements IntegerSequence {
         return data.length;
     }
     public void reset() {
-
+        currentIndex = -1;
     }
 }
