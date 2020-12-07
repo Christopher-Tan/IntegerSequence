@@ -4,6 +4,19 @@ public class ArraySequence implements IntegerSequence {
     int[] data;
 
     public ArraySequence(int[] other) {
-        
+        data = other.clone();
+        currentIndex = 0;
+    }
+    public boolean hasNext() {
+        return true;
+    }
+    public int next() {
+        return 0;
+    }
+    public int length() {
+        return 0;
+    }
+    public void reset() {
+
     }
 }
