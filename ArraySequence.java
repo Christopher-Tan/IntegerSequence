@@ -10,7 +10,10 @@ public class ArraySequence implements IntegerSequence {
     public boolean hasNext() {
         return currentIndex < data.length - 1;
     }
-    public int next() {
+    public int next() throws NoSuchElementException {
+        if (currentIndex + 1 > data.length - 1) {
+            throw new NoSuchElementException("no such element exists");
+        }
         currentIndex++;
         return data[currentIndex];
     }
@@ -19,5 +22,14 @@ public class ArraySequence implements IntegerSequence {
     }
     public void reset() {
         currentIndex = -1;
+    }
+    public ArraySequence(IntegerSequence otherseq) {
+        currentIndex = -1;
+        otherseq.reset();
+        data = new int[otherseq.length()];
+        for (int i = 0; i < otherseq.length(); i++) {
+            data[i] = otherseq.next();
+        }
+        otherseq.reset();
     }
 }

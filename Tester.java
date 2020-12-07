@@ -18,5 +18,21 @@ public class Tester {
         }
         test.reset();
         System.out.println(test.next());
+        //arraysequence
+        int[] temp = {1,5,6,2,5,4};
+        ArraySequence n = new ArraySequence(temp);
+        while (n.hasNext()) {
+            System.out.println(n.next());
+        }
+        int[] nums = {1,3,5,0,-1,3,9};
+        IntegerSequence as = new ArraySequence(nums);
+        System.out.println("ArraySequence(array):");
+        while (as.hasNext()) {
+            System.out.print(as.next() + ", ");
+        }
+        ArraySequence ns = new ArraySequence(as);
+        while (ns.hasNext()) {
+            System.out.println(ns.next());
+        }
     }
 }
